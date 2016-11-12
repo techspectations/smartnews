@@ -570,3 +570,16 @@
 2016-11-12 12:37:30,469 [Worker-312] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2016-11-12 12:37:30,470 [Worker-312] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2016-11-12 12:37:30,471 [Worker-312] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-11-12 16:02:01,773 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.manorama:smart-news:0.0.1-SNAPSHOT @ G:\ManoramaHack\server-framework\smart-news\pom.xml.
+2016-11-12 16:02:01,773 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.manorama:smart-news:0.0.1-SNAPSHOT @ G:\ManoramaHack\server-framework\smart-news\pom.xml.
+2016-11-12 16:02:09,866 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-12 16:02:09,866 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-11-12 16:02:09,935 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-11-12 16:02:09,935 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-12 16:02:09,935 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-11-12 16:02:11,284 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.manorama:smart-news:0.0.1-SNAPSHOT @ G:\ManoramaHack\server-framework\smart-news\pom.xml.
+2016-11-12 16:02:14,118 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-12 16:02:14,123 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-11-12 16:02:14,124 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-11-12 16:02:14,128 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-12 16:02:14,128 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

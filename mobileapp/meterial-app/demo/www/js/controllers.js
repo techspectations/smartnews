@@ -215,7 +215,7 @@ angular.module('starter.controllers', [])
             });
 
     })
-.directive('populatePortlets', function() {
+.directive('populatePortlets', function($timeout) {
         var directive = {};
 
         directive.restrict = 'E'; /* restrict this directive to elements */
@@ -255,6 +255,9 @@ angular.module('starter.controllers', [])
                 cricketwidget.rightscore = additionalValues.rightscore;
                 cricketwidget.rightsubvalue = additionalValues.rightsubvalue;
                 $scope.cricketflashlist = $scope.widgets[i].flashNews;
+                if($scope.cricketflashlist.length >0){
+                    $scope.displayCricketFlash();
+                }
                 $scope.completeWidgets.push(cricketwidget);
 
 
@@ -276,6 +279,9 @@ angular.module('starter.controllers', [])
                 }
 
                 $scope.footballflashlist = $scope.widgets[i].flashNews;
+                if($scope.footballflashlist.length >0){
+                    $scope.displayFootballFlash();
+                }
                 $scope.completeWidgets.push(footballwidget);
 
 
@@ -284,11 +290,10 @@ angular.module('starter.controllers', [])
                 var additionalValues = JSON.parse($scope.widgets[i].values);
                 stockwidget.title = $scope.widgets[i].category;
                 stockwidget.widgetid = $scope.widgets[i].widgetid;
-                stockwidget.sensexstatus = additionalValues.leftflag;
-                stockwidget.sensexvalue = additionalValues.leftcountry;
-                stockwidget.niftystatus = additionalValues.leftscore;
-                stockwidget.niftyvalue = additionalValues.leftsubvalue;
-                stockwidget.rightflag = additionalValues.rightflag;
+                stockwidget.sensexstatus = additionalValues.sensexstatus;
+                stockwidget.sensexvalue = additionalValues.sensexvalue;
+                stockwidget.niftystatus = additionalValues.niftystatus;
+                stockwidget.niftyvalue = additionalValues.niftyvalue;
                 var stockFlashLst = $scope.widgets[i].flashNews;
                 if(stockFlashLst != undefined){
                     for(var j=0;j<stockFlashLst.length;j++){
@@ -298,15 +303,20 @@ angular.module('starter.controllers', [])
                         }
                 }
 
-
+                    if($scope.stockflashlist.length >0){
+                        $scope.displayStockFlash();
+                    }
                 }
                 $scope.completeWidgets.push(stockwidget);
 
 
             }else if($scope.widgets[i].widgetid == 'district'){
                 var districtwidget ={};
-                var additionalValues = JSON.parse($scope.widgets[i].values);
+                //var additionalValues = JSON.parse($scope.widgets[i].values);
                 $scope.districtflashlist = $scope.widgets[i].flashNews;
+                if($scope.districtflashlist.length >0){
+                    $scope.displaydistrictFlash();
+                }
                 districtwidget.widgetid = $scope.widgets[i].widgetid;
                 districtwidget.title = $scope.widgets[i].category;
                 $scope.completeWidgets.push(districtwidget);
@@ -315,6 +325,9 @@ angular.module('starter.controllers', [])
                 var statewidget ={};
                // var additionalValues = JSON.parse($scope.widgets[i].values);
                 $scope.stateflashlist = $scope.widgets[i].flashNews;
+                if($scope.stateflashlist.length >0){
+                    $scope.displayStateFlash();
+                }
                 statewidget.title = $scope.widgets[i].category;
                 statewidget.widgetid = $scope.widgets[i].widgetid;
                 $scope.completeWidgets.push(statewidget);
@@ -323,6 +336,9 @@ angular.module('starter.controllers', [])
                 var countrywidget ={};
                 //var additionalValues = JSON.parse($scope.widgets[i].values);
                 $scope.countryflashlist = $scope.widgets[i].flashNews;
+                if($scope.countryflashlist.length >0){
+                    $scope.displayCountryFlash();
+                }
                 countrywidget.title = $scope.widgets[i].category;
                 countrywidget.widgetid = $scope.widgets[i].widgetid;
                 $scope.completeWidgets.push(countrywidget);
@@ -331,6 +347,77 @@ angular.module('starter.controllers', [])
         }
         console.log("got it");
     }
+
+            $scope.displayStockFlash = function(){
+                var i =  Math.floor((Math.random() * $scope.stockflashlist.length) + 1);
+                $scope.stockflash = $scope.stockflashlist[i];
+                console.log($scope.stockflash);
+               $timeout(function(){
+
+                    $scope.displayStockFlash();
+                }, 3000);
+
+            }
+
+            $scope.displayFootballFlash = function(){
+                var i =  Math.floor((Math.random() * $scope.footballflashlist.length) + 1);
+                $scope.footballflash = $scope.footballflashlist[i];
+                console.log($scope.footballflash);
+
+                $timeout(function(){
+
+                    $scope.displayFootballFlash();
+                }, 3000);
+
+
+            }
+
+            $scope.displayCricketFlash = function(){
+                var i =  Math.floor((Math.random() * $scope.cricketflashlist.length) + 1);
+                $scope.cricketflash = $scope.cricketflashlist[i];
+                console.log($scope.cricketflash);
+                $timeout(function(){
+
+                    $scope.displayCricketFlash();
+                }, 3000);
+
+
+            }
+
+            $scope.displaydistrictFlash = function(){
+                var i =  Math.floor((Math.random() * $scope.districtflashlist.length) + 1);
+                $scope.districtflash = $scope.districtflashlist[i]
+                /*$timeout(function(){
+
+                    $scope.displaydistrictFlash();
+                }, 3000);*/
+
+
+            }
+
+            $scope.displayStateFlash = function(){
+                var i =  Math.floor((Math.random() * $scope.stateflashlist.length) + 1);
+                $scope.stateflash = $scope.stateflashlist[i];
+                console.log($scope.stateflash);
+                $timeout(function(){
+
+                    $scope.displayStateFlash();
+                }, 3000);
+
+
+            }
+
+            $scope.displayCountryFlash = function(){
+                var i =  Math.floor((Math.random() * $scope.districtflashlist.length) + 1);
+                $scope.countryflash = $scope.countryflashlist[i];
+                console.log($scope.countryflash);
+               /* $timeout(function(){
+
+                    $scope.displayCountryFlash();
+                }, 3000);*/
+
+
+            }
 
            /* $scope.completeWidgets = angular.copy($scope.widgets);*/
         }
