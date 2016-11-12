@@ -1,0 +1,7 @@
+package com.manorama;
+
+public class ManoramaHackMain {
+	public static void main(String[] args) {
+		ManoramaHackMain.run(ManoramaHackMain.class, args);
+	}
+}

@@ -1,0 +1,43 @@
+package com.manorama.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.manorama.dao.NewsFlashRepository;
+import com.manorama.dao.NewsRepository;
+import com.manorama.dao.UserNewsCategoryRepository;
+import com.manorama.dao.UserTasteRepository;
+import com.manorama.dao.UsersRepository;
+import com.manorama.dao.WidgetNewsRepository;
+import com.manorama.vo.WidgetsVO;
+
+@Service
+public class ViewServices {
+	
+	@Autowired
+	private NewsFlashRepository newsFlashRepository;
+	
+	@Autowired
+	private NewsRepository newsRepository;
+	
+	@Autowired
+	private UserNewsCategoryRepository userNewsCategoryRepository;
+	
+	@Autowired
+	private UsersRepository usersRepository;
+	
+	@Autowired
+	private UserTasteRepository userTasteRepository;
+	
+	@Autowired
+	private WidgetNewsRepository widgetNewsRepository;
+
+	public List<WidgetsVO> findWidgets(String userid) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+
+}

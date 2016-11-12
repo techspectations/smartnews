@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="list full" >
+    <div ng-repeat="widget in completeWidgets">
+    <div ui-sref="app.profile" ng-show="widget.widgetid == 'cricket'" class="cricket-score card card-gallery item item-text-wrap">
+        <div class="ink red-bg">
+            <h2>{{widget.title}}</h2>
+
+        </div>
+        <div class="score-panel">
+            <div class="score-left">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                        <img src="{{widget.leftflag}}">
+                    </div>
+                    <div class="score-country-name">
+                        {{widget.leftcountry}}
+                    </div>
+
+                </div>
+                <div class="score-value">
+                    {{widget.leftscore}}
+                </div>
+                <div class="score-subvalue">
+                    {{widget.leftsubvalue}}
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="score-right">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                        <img src="{{widget.rightflag}}">
+                    </div>
+                    <div class="score-country-name">
+                        {{widget.rightcountry}}
+                    </div>
+
+                </div>
+                <div class="score-value">
+                    {{widget.rightscore}}
+                </div>
+                <div class="score-subvalue">
+                    {{widget.rightsubvalue}}
+                </div>
+            </div>
+
+        </div>
+        <hr/>
+        <div class="each-stock">
+            <span class="flash-each-label">{{cricketflash}}</span>
+        </div>
+
+    </div>
+
+    <div ui-sref="app.profile" ng-show="widget.widgetid == 'football'" class="cricket-score card card-gallery item item-text-wrap">
+        <div class="ink red-bg">
+            <h2>{{widget.title}}</h2>
+
+        </div>
+        <div class="score-panel">
+            <div class="score-left">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                        <img src="{{widget.leftflag}}">
+                    </div>
+                    <div class="score-country-name">
+                        {{widget.leftcountry}}
+                    </div>
+
+                </div>
+                <div class="score-value">
+                    {{widget.leftscore}}
+                </div>
+                <div class="score-subvalue">
+                    {{widget.leftsubvalue}}
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="score-right">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                        <img src="{{widget.rightflag}}">
+                    </div>
+                    <div class="score-country-name">
+                        {{widget.rightcountry}}
+                    </div>
+
+                </div>
+                <div class="score-value">
+                    {{widget.rightscore}}
+                </div>
+                <div class="score-subvalue">
+                    {{widget.rightsubvalue}}
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="each-stock">
+            <span class="flash-each-label">{{footballflash}}</span>
+        </div>
+    </div>
+
+    <div ui-sref="app.profile" ng-show="widget.widgetid == 'stock'" class="stock-market card card-gallery item item-text-wrap">
+        <div class="ink red-bg">
+            <h2>{{widget.title}}</h2>
+
+        </div>
+        <div class="score-panel">
+            <div class="score-left">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                    </div>
+                    <div class="stock-label">
+                        SENSEX <img class="up-down" src="{{widget.sensexstatus}}">
+                    </div>
+
+                </div>
+                <div class="score-value">
+                    {{widget.sensexvalue}}
+                </div>
+                <div class="score-subvalue">
+
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="score-right">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                    </div>
+                    <div class="stock-label">
+                        NIFTY<img class="up-down" src="{{widget.niftystatus}}">
+                    </div>
+
+                </div>
+                <div class="score-value">
+                    {{widget.niftyvalue}}
+                </div>
+                <div class="score-subvalue">
+
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="each-stock">
+            <span class="stock-each-label">{{stockflash.label}}</span> <span class="stock-each-value">{{stockflash.value}}</span><img class="each-up" src="{{stockflash.status}}"><span class="positive">{{stockflash.status}}</span>
+        </div>
+    </div>
+
+    <div ui-sref="app.profile" ng-show="widget.widgetid == 'district'" class="stock-market card card-gallery item item-text-wrap">
+        <div class="ink red-bg">
+            <h2>{{widget.title}}</h2>
+
+        </div>
+        <div class="score-panel">
+            <div class="score-full">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                    </div>
+                    <div class="stock-label">
+                        {{districtflash}}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <hr/>
+        <div class="each-stock">
+            <span class="stock-each-label">Configure</span> <span class="goto-detail">Details</span>
+        </div>
+    </div>
+
+    <div ui-sref="app.profile" ng-show="widget.widgetid == 'state'" class="stock-market card card-gallery item item-text-wrap">
+        <div class="ink red-bg">
+            <h2>{{widget.title}}</h2>
+
+        </div>
+        <div class="score-panel">
+            <div class="score-full">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                    </div>
+                    <div class="stock-label">
+                       {{stateflash}}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <hr/>
+        <div class="each-stock">
+            <span class="stock-each-label">Configure</span> <span class="goto-detail">Details</span>
+        </div>
+    </div>
+
+    <div ui-sref="app.profile" ng-show="widget.widgetid == 'country'" class="stock-market card card-gallery item item-text-wrap">
+        <div class="ink red-bg">
+            <h2>{{widget.title}}</h2>
+
+        </div>
+        <div class="score-panel">
+            <div class="score-full">
+                <div class="score-country">
+                    <div class="score-country-flag">
+                    </div>
+                    <div class="stock-label">
+                       {{countryflash}}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>

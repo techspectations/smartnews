@@ -1,0 +1,13 @@
+package com.manorama.service;
+
+import com.manorama.entity.Widget;
+
+public class CronServices {
+	
+	public void constructWidget(){
+		Widget widget1 = new Widget();
+		widget1.setCategory("National News");
+		widget1.setWidget_id("state");
+		widget1.setValue("");
+	}
+}

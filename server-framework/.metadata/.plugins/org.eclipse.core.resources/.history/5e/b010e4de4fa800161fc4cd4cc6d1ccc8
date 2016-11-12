@@ -1,0 +1,10 @@
+package com.manorama;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ManoramaHackMain {
+	public static void main(String[] args) {
+		SpringApplication.run(ManoramaHackMain.class, args);
+	}
+}

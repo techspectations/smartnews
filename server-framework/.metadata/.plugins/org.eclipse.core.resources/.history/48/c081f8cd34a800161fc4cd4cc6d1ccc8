@@ -1,0 +1,5 @@
+package com.manorama.entity;
+
+public class WidgetNews {
+
+}

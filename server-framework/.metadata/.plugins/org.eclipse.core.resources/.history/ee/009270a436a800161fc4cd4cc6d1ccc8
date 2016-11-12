@@ -1,0 +1,26 @@
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+server.port=8080
+spring.thymeleaf.mode=LEGACYHTML5
+
+debug=true
+
+application.baseURL=http://localhost:8080
+
+
+#no-reply mail properties
+no-reply.mail.fromAddress=info@ellostays.com
+no-reply.mail.smtp.auth=true
+no-reply.mail.smtp.starttls.enable=true
+no-reply.mail.smtp.host=smtp.ellostays.com
+no-reply.mail.smtp.port=587
+no-reply.mail.username=info@ellostays.com
+no-reply.mail.password=E1l0st@ys
+
+#no-reply.mail.mail.smtp.auth=true
+#no-reply.mail.smtp.starttls.enable=true
+#no-reply.mail.smtp.host=smtp.gmail.com
+#no-reply.mail.smtp.port=587
+#no-reply.mail.username=ellostays@gmail.com
+#no-reply.mail.password=Nibodha@123
+

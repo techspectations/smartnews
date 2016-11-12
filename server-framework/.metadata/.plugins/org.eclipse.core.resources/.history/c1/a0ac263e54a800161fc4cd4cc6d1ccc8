@@ -1,0 +1,85 @@
+package com.manorama.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.manorama.dao.NewsFlashRepository;
+import com.manorama.dao.NewsRepository;
+import com.manorama.dao.UserNewsCategoryRepository;
+import com.manorama.dao.UserTasteRepository;
+import com.manorama.dao.UsersRepository;
+import com.manorama.dao.WidgetRepository;
+import com.manorama.entity.News;
+import com.manorama.entity.UserNewsCategory;
+import com.manorama.entity.UserTaste;
+import com.manorama.entity.Widget;
+import com.manorama.vo.NewsVO;
+import com.manorama.vo.WidgetsVO;
+
+@Service
+public class ViewServices {
+	
+	@Autowired
+	private NewsFlashRepository newsFlashRepository;
+	
+	@Autowired
+	private NewsRepository newsRepository;
+	
+	@Autowired
+	private UserNewsCategoryRepository userNewsCategoryRepository;
+	
+	@Autowired
+	private UsersRepository usersRepository;
+	
+	@Autowired
+	private UserTasteRepository userTasteRepository;
+	
+	@Autowired
+	private WidgetRepository widgetRepository;
+
+	public List<WidgetsVO> findWidgets(String userid) {
+		List<WidgetsVO> resultList = new ArrayList<WidgetsVO>();
+		List<Widget> widgetList = widgetRepository.findAll();
+		List<UserTaste> userTastes = userTasteRepository.findByUserId(userid);
+		for(UserTaste userTaste : userTastes){
+			int i = 1;
+			for(Widget widget : widgetList){
+				if(widget.getCategory().equalsIgnoreCase(userTaste.getCategory())){
+					WidgetsVO widgetVo = new WidgetsVO();
+					widgetVo.setCategory(userTaste.getCategory());
+					widgetVo.setWidgetid(widget.getId());
+					widgetVo.setPriority(i);
+					widgetVo.setValues(widget.getValue());
+					i++;
+					resultList.add(widgetVo);
+				}
+			}
+		}
+		return resultList;
+	}
+	
+	public List<NewsVO> findNews(String userid, String category){
+		List<NewsVO> resultList = new ArrayList<NewsVO>();
+		List<UserNewsCategory> userNewsList = userNewsCategoryRepository.findByUserId(userid);
+		List<News> newsList = newsRepository.findAll();
+		for(UserNewsCategory userNews : userNewsList){
+			for(News news : newsList){
+				if(news.getSource().equalsIgnoreCase(userNews.getPreferedSource()) && news.getCategory().equalsIgnoreCase(category) ){
+					NewsVO newsVo =  new NewsVO();
+					newsVo.setCategory(news.getCategory());
+					newsVo.setDescription(news.getDescription());
+					newsVo.setHeadline(news.getHeadline());
+					newsVo.setNewsId(news.getId());
+					newsVo.setSource(news.getSource());
+					resultList.add(newsVo);
+				}
+			}
+		}
+			
+		return resultList;
+	}
+
+}

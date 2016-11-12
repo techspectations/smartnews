@@ -1,0 +1,42 @@
+package com.manorama.vo;
+
+public class WidgetsVO {
+	private String id;
+	private String widget_id;
+	private String values;
+	private String category;
+	private int priority;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getWidget_id() {
+		return widget_id;
+	}
+	public void setWidget_id(String widget_id) {
+		this.widget_id = widget_id;
+	}
+	public String getValues() {
+		return values;
+	}
+	public void setValues(String values) {
+		this.values = values;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public int getPriority() {
+		return priority;
+	}
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+	
+	
+
+}

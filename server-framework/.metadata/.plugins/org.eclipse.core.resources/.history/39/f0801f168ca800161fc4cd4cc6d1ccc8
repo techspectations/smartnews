@@ -1,0 +1,57 @@
+package com.manorama.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.manorama.dao.NewsFlashRepository;
+import com.manorama.dao.NewsRepository;
+import com.manorama.dao.UserNewsCategoryRepository;
+import com.manorama.dao.UserTasteRepository;
+import com.manorama.dao.UsersRepository;
+import com.manorama.dao.WidgetRepository;
+import com.manorama.entity.Widget;
+@Service
+public class CronServices {
+	@Autowired
+	private NewsFlashRepository newsFlashRepository;
+	
+	@Autowired
+	private NewsRepository newsRepository;
+	
+	@Autowired
+	private UserNewsCategoryRepository userNewsCategoryRepository;
+	
+	@Autowired
+	private UsersRepository usersRepository;
+	
+	@Autowired
+	private UserTasteRepository userTasteRepository;
+	
+	@Autowired
+	private WidgetRepository widgetRepository;
+	public void constructWidget(){
+		Widget widget1 = new Widget();
+		widget1.setCategory("National News");
+		widget1.setWidget_id("state");
+		widget1.setValue("");
+		widgetRepository.save(widget1);
+		
+		Widget widget2 = new Widget();
+		widget2.setCategory("District News - Idukki");
+		widget2.setWidget_id("district");
+		widget2.setValue("");
+		widgetRepository.save(widget2);
+		
+		Widget widget3 = new Widget();
+		widget3.setCategory("Stock");
+		widget3.setWidget_id("stock");
+		widget3.setValue("{sensexstatus:'down',{sensexstatus:'down',senseximage:'/img/utils/down-arrow.png',sensexvalue:8522, niftystatus:'down', niftyimage:'/img/utils/up-arrow.png',niftyvalue:'fd'}");
+		widgetRepository.save(widget3);
+		
+		Widget widget4 = new Widget();
+		widget4.setCategory("Football - ISL");
+		widget4.setWidget_id("football");
+		widget4.setValue("{leftflag:'down',leftcountry:'',leftscore:'',leftsubvalue:'',rightflag:'',rightcountry:'',rightscore:'',rightsubvalue:'' }");
+		widgetRepository.save(widget3);
+	}
+}

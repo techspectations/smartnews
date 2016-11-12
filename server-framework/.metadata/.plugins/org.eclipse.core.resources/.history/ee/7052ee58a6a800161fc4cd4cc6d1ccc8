@@ -1,0 +1,9 @@
+package com.manorama.dao;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.manorama.entity.NewsFlash;
+
+public interface NewsFlashRepository  extends MongoRepository<NewsFlash, String>{
+
+}

@@ -1,0 +1,246 @@
+/* General
+==================================*/
+h1 {
+    color: #fff;
+    text-shadow: 0 1px 0px #000;
+    font-size: 42px;
+}
+
+.red-bg{
+    background-color: #B71C1C;
+}
+.red-bg h2{
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Utilities
+==================================*/
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.scroll {
+    height: 100%;
+}
+
+
+/* Menu
+==================================*/
+.menu .bar.bar-header.expanded {
+    transition: all .5s ease-in-out;
+}
+
+.menu-open .bar.bar-header.expanded {
+    background-color: #222;
+}
+
+.menu h2 {
+    bottom: 0;
+    font-size: 18px;
+    left: 16px;
+    position: absolute;
+}
+
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+}
+
+.menu.menu-left * {
+    font-weight: bold;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+
+/* Login
+==================================*/
+.app-icon {
+    background-color: #fff;
+    background: url('../img/crown.jpg') center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 125px;
+    margin: 0 auto;
+    width: 125px;
+}
+
+.social-login {
+    position: fixed;
+    bottom: 0;
+}
+/* Full List
+==================================*/
+.list.full {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.list.full:first-child {
+    padding: 16px 8px 16px 16px;
+}
+.list.full:last-child {
+    padding: 16px 16px 16px 8px;
+}
+
+.list.full:first-child .card.card-gallery {
+    margin-left: 0;
+    margin-right: 0;
+}
+.list.full:last-child .card.card-gallery {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 18px;
+}
+.list .card.card-gallery.item h2 {
+    padding: 4px;
+}
+/* Cricket Score
+==================================*/
+.list .card.card-gallery{
+    width: 100%;
+}
+.cricket-score .score-left{
+    float: left;
+    /*background-color: #60AB59;*/
+    padding: 10px;
+    width: 49.5%;
+}
+
+.cricket-score .score-right{
+    float: left;
+   /*// background-color: #CE6B70;*/
+    padding: 10px;
+    width: 49.5%;
+}
+.cricket-score .score-country-name{
+    float: left;
+}
+.cricket-score .score-country-flag{
+    float: left;
+}
+.cricket-score .score-country{
+    display: inline-block;
+}
+.score-country-name{
+    padding-left: 4px;
+}
+
+.cricket-score .vertical-line {
+    width: 3px;
+    height: 94px;
+    /*background-color: #B71C1C;*/
+    margin: 0 auto;
+    float: left;
+    border-left: 3px dashed #b71c1c;
+}
+
+/* Cricket Score
+==================================*/
+.list .card.card-gallery{
+    width: 100%;
+}
+.stock-market .score-left{
+    float: left;
+    /*background-color: #60AB59;*/
+    padding: 10px;
+    width: 49.5%;
+}
+
+.stock-market .score-full{
+    /*background-color: #60AB59;*/
+    padding: 10px;
+    width: 98%;
+}
+
+.stock-market .score-right{
+    float: left;
+    /*// background-color: #CE6B70;*/
+    padding: 10px;
+    width: 49.5%;
+}
+.stock-market .stock-label{
+    float: left;
+    font-size: 20px;
+}
+.stock-market .score-country-flag{
+    float: left;
+}
+.stock-market .score-country{
+    display: inline-block;
+}
+.score-country-name{
+    padding-left: 4px;
+}
+
+.stock-market .vertical-line {
+    width: 3px;
+    height: 94px;
+    /*background-color: #B71C1C;*/
+    margin: 0 auto;
+    float: left;
+    border-left: 3px dashed #b71c1c;
+}
+
+.cricket-score hr, .stock-market hr {
+    border: none;
+    border-top: 3px dashed #b71c1c;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 100%;
+}
+
+.stock-market .up-down{
+    float: right;
+    padding-left: 4px;
+}
+
+.each-up{
+    display: inline !important;
+    padding-left: 4px;
+    padding-right: 3px;
+}
+
+
+.stock-each-label{
+    color: #0057e7;
+}
+.flash-each-label{
+    color: #000;
+}
+.each-stock{
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 6px;
+    padding-bottom: 3px;
+}
+
+.goto-detail{
+    float: right;
+    padding-right: 3px;
+    color: #0057e7;
+}
+
+.each-stock .positive{
+    color: #99132a;
+}

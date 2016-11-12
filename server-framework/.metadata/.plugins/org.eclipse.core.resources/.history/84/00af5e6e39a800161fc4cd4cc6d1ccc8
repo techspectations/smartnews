@@ -1,0 +1,9 @@
+package com.manorama.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+public class SNController {
+
+}

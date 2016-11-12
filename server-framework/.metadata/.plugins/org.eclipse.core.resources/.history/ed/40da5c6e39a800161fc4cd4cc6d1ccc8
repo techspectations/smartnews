@@ -1,0 +1,7 @@
+package com.manorama.controller;
+
+
+@RestController
+public class SNController {
+
+}

@@ -1,0 +1,14 @@
+package com.manorama.dao;
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.manorama.entity.Widget;
+import com.manorama.service.NewsFlash;
+
+public interface WidgetRepository  extends MongoRepository<Widget, String>{
+
+	List<NewsFlash> findByCategory(String category);
+
+}

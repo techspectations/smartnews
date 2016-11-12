@@ -1,0 +1,5 @@
+package com.manorama.dao;
+
+public class UserNewsCategoryRepository {
+
+}

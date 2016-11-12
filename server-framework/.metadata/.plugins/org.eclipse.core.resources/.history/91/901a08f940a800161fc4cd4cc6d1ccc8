@@ -1,0 +1,9 @@
+package com.manorama.dao;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.manorama.entity.Widget;
+
+public interface WidgetNewsRepository  extends MongoRepository<Widget, String>{
+
+}
