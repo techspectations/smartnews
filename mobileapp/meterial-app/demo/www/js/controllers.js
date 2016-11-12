@@ -387,10 +387,10 @@ angular.module('starter.controllers', [])
             $scope.displaydistrictFlash = function(){
                 var i =  Math.floor((Math.random() * $scope.districtflashlist.length) + 1);
                 $scope.districtflash = $scope.districtflashlist[i]
-                /*$timeout(function(){
+                $timeout(function(){
 
                     $scope.displaydistrictFlash();
-                }, 3000);*/
+                }, 3000);
 
 
             }
